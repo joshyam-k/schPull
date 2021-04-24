@@ -8,7 +8,7 @@ free_scooter_new <-
   dplyr::mutate(lon = as.numeric(lon), lat = as.numeric(lat)) %>%
   dplyr::mutate(last_updated = with_tz(last_updated, tzone = "America/Los_Angeles"))
 
-old_data <- readr::read_csv("https://raw.githubusercontent.com/joshyam-k/scheduled-commit-action/master/data-raw/lime.csv")
+old_data <- readr::read_csv("https://raw.githubusercontent.com/joshyam-k/schPull/master/data-folder/lime.csv")
 
 old_data <- old_data %>%
   dplyr::mutate(last_updated = with_tz(last_updated, tzone = "America/Los_Angeles"))
@@ -25,4 +25,6 @@ new_interval <- lubridate::interval(new_min, max)
 to_be_pushed_filtered <- to_be_pushed %>%
   dplyr::filter(last_updated %within% new_interval)
 
-write_csv(to_be_pushed_filtered, path = "data-raw/lime.csv" )
+write_csv(to_be_pushed_filtered, path = "data-folder/lime.csv" )
+
+
