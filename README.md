@@ -5,3 +5,5 @@ This repository runs github actions on a schedule as a way to aggregate San Fran
 I relied heavily on the following two great tutorials to get this system up and running and would highly recommend checking them out if you're interested in doing something similar.
 - A [blogpost](https://jasonet.co/posts/scheduled-actions/) written by Jason Etcovich 
 - A [blogpost](https://blog.simonpcouch.com/blog/r-github-actions-commit/) written by Simon Couch.
+
+Note: actions have been disabled on this repository since the dashboard that it was feeding into is no longer being used!
